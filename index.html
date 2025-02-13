@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +7,24 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="header">
+    <div id="profile" class="clickable">
+      <img id="avatar" src="" alt="Avatar">
+      <div>
+        <p id="username">Загрузка...</p>
+        <p id="highscore">Рекорд: 0</p>
+      </div>
+    </div>
+    <button id="leaderboard-btn" class="btn">Лидерборд</button>
+  </div>
+
   <div id="game-container">
     <h1>Block Blast</h1>
-    <canvas id="gameCanvas" width="400" height="600"></canvas>
-    <p id="score">Score: 0</p>
-    <p id="timer">Time Left: 60</p>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <p id="score">Счет: 0</p>
+    <button id="play-btn" class="btn">Играть</button>
   </div>
+
   <script type="module" src="game.js"></script>
 </body>
 </html>
