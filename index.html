@@ -18,11 +18,14 @@
     <button id="leaderboard-btn" class="btn">Лидерборд</button>
   </div>
 
-  <div id="game-container">
+  <div id="start-screen">
     <h1>Block Blast</h1>
+    <button id="play-btn" class="btn">Играть</button>
+  </div>
+
+  <div id="game-container" style="display: none;">
     <canvas id="gameCanvas" width="400" height="400"></canvas>
     <p id="score">Счет: 0</p>
-    <button id="play-btn" class="btn">Играть</button>
   </div>
 
   <script type="module" src="game.js"></script>
