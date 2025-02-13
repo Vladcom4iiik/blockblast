@@ -152,3 +152,7 @@ document.getElementById('leaderboard-btn').addEventListener('click', async () =>
 document.getElementById('profile').addEventListener('click', () => {
   window.location.href = 'profile.html'; // Переход на страницу профиля
 });
+
+// Инициализация
+initGrid();
+drawGrid();

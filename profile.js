@@ -19,7 +19,7 @@ const totalScoreElement = document.getElementById('total-score');
 // Заполняем данные профиля
 if (user) {
   avatarElement.src = user.photo_url || 'https://via.placeholder.com/50';
-  usernameElement.textContent = user.first_name || 'Anonymous';
+  usernameElement.textContent = user.first_name || 'Аноним';
 
   // Загружаем статистику из Firebase
   loadProfileStats(user.id);
@@ -36,12 +36,12 @@ async function loadProfileStats(userId) {
   const userStats = leaderboard.find(entry => entry.userId === userId);
 
   if (userStats) {
-    highscoreElement.textContent = `High Score: ${userStats.score}`;
-    totalGamesElement.textContent = `Total Games Played: ${Math.floor(Math.random() * 100)}`; // Пример
-    totalScoreElement.textContent = `Total Score: ${Math.floor(Math.random() * 1000)}`; // Пример
+    highscoreElement.textContent = `Рекорд: ${userStats.score}`;
+    totalGamesElement.textContent = `Всего игр сыграно: ${Math.floor(Math.random() * 100)}`; // Пример
+    totalScoreElement.textContent = `Общий счет: ${Math.floor(Math.random() * 1000)}`; // Пример
   } else {
-    highscoreElement.textContent = 'High Score: 0';
-    totalGamesElement.textContent = 'Total Games Played: 0';
-    totalScoreElement.textContent = 'Total Score: 0';
+    highscoreElement.textContent = 'Рекорд: 0';
+    totalGamesElement.textContent = 'Всего игр сыграно: 0';
+    totalScoreElement.textContent = 'Общий счет: 0';
   }
 }
